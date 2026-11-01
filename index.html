@@ -25,6 +25,46 @@
 			/* change colour of line fill */
       fill: #2a2a2a;
     }
+
+	section{
+		padding: 10px;
+		width: 100%;
+	}
+
+	table caption {
+		visibility: hidden;
+		height: 0;
+	}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+th, td {
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+th {
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #eaeaea;
+}
+
 	</style>
 </head>
 
@@ -53,16 +93,16 @@
 				<h2>Topics menu</h2>
 				<div class="row">
 					<ul role="menubar" class="list-inline menu">
-						<!-- Removed redundant tab index -->
-						<li><a class="item" href="index-en.html"  aria-posinset="1" aria-setsize="7"
+						<!-- Removed redundant and confusing semantic tags -->
+						<li><a class="item" href="index-en.html"
 								role="menuitem">Home</a></li>
-						<li><a class="item" href="internet-en.html" aria-posinset="2" aria-setsize="7"
+						<li><a class="item" href="internet-en.html"
 								role="menuitem">Buying</a></li>
-						<li><a class="item" href="intranet-en.html" aria-posinset="3" aria-setsize="7"
+						<li><a class="item" href="intranet-en.html"
 								role="menuitem">Selling</a></li>
-						<li><a class="item" href="faq-en.html" aria-posinset="6" aria-setsize="7"
+						<li><a class="item" href="faq-en.html"
 								role="menuitem">FAQs</a></li>
-						<li><a class="item" href="contact-en.html" aria-posinset="7" aria-setsize="7"
+						<li><a class="item" href="contact-en.html"
 								role="menuitem">Contact us</a></li>
 					</ul>
 				</div>
@@ -88,7 +128,7 @@
 				<h3>Stats of HI/Max</h3>
 				<!-- Add table -->
 				<table>
-					<!-- Add desxcriptive caption to table  -->
+					<!-- Add desxcriptive caption to table, hide visually -->
 					<caption>Information of HI/Max sales in Ontario and Quebec based on type of property</caption>
 					<!-- Seperate table head and table body to give headings proper span over columns and rows -->
 					<thead>
@@ -137,33 +177,35 @@
 			</article>
 		</section>
 		<!-- Change to section -->
-		<section class="clear">
+		<section class="row">
 			<div><h2>More Resources on How to Choose the Right Agent</h2></div>
 			<div class="row">
 				<article class="col-md-4 ">
-					<img src="/1.png" alt="Image of a red bird house hanging from a tree">
-					<h3><a href="#" id="risks">What Are The Risks of Selling a Home Yourself?</a></h3>
+					<!-- Add alt to image -->
+					<img src="1.png" alt="Image of a red bird house hanging from a tree">
+					<a href="#"><h3 id="risks">What Are The Risks of Selling a Home Yourself?</h3></a>
 					<p>We’ve all seen the videos, read the stories, and gasped at the images of people who thought they could conquer a project that would have been better left to the professionals.</p>
-					<!-- add labelledby to associate link with heading and not repeating the text of the heading -->
-					<a href="#" labelledby="risks">Read More</a>
+					<!-- add describedby to associate link with heading and not repeating the text of the heading -->
+					<a href="#" aria-describedby="risks">Read More</a>
 				</article>
 				<article class="col-md-4">
-				<img src="/2.png" alt="Image of relator sitting with client at a table">
-					<h3><a href="#" id="questions">7 Questions to Ask a Real Estate Agent Before You Commit</a></h3>
+				<!-- Add alt to image -->
+					<img src="2.png" alt="Image of relator sitting with client at a table">
+				<!-- Remove unecessary link -->
+					<a href="#"><h3 id="questions">7 Questions to Ask a Real Estate Agent Before You Commit</h3></a>
 					<p>According to research by the National Association of Realtors, there are considerable benefits to working with a real estate agent, including higher sale prices.</p>
 					<!-- add read more link at bottom to improve keyboard user flow -->
-					<!-- add labelledby to associate link with heading and not repeating the text of the heading -->
-					<a href="#" labelledby="questions">Read More</a>
+					<!-- add describedby to associate link with heading and not repeating the text of the heading -->
+					<a href="#" aria-describedby="questions">Read More</a>
 				</article>
 				<article class="col-md-4">
-				<img src="/3.png" alt="Image of a red bird house hanging from a tree">
-					<h3>
-						<a href="#">8 Reasons to Hire an Agent When Selling Your Home</a>
-					</h3>
+				<!-- Add alt to image -->
+					<img src="3.png" alt="Image of a red bird house hanging from a tree">
+					<a href="#"><h3 id="reasons">8 Reasons to Have a Real Estate Agent on Speed Dial</h3></a>
 					<p>With all the many different moving parts involved in selling your home, here are eight very valid reasons to have a real estate agent on speed dial.</p>
 					<!-- add read more link at bottom to improve keyboard user flow -->
-					<!-- add labelledby to associate link with heading and not repeating the text of the heading -->
-					<a href="#" labelledby="reasons">Read More</a>
+					<!-- add describedby to associate link with heading and not repeating the text of the heading -->
+					<a href="#" aria-describedby="reasons">Read More</a>
 				</article>
 			</div>
 		</section>
